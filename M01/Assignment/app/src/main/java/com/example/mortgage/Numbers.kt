@@ -1,4 +1,3 @@
 package com.example.mortgage
 
-class Numbers {
-}
+data class Numbers (val data: List<Int>)
