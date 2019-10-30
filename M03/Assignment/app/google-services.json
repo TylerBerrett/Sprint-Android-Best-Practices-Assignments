@@ -1,34 +1,42 @@
 {
   "project_info": {
-    "project_number": "644147083751",
-    "firebase_url": "https://test-dfffa.firebaseio.com",
-    "project_id": "test-dfffa",
-    "storage_bucket": "test-dfffa.appspot.com"
+    "project_number": "775317686157",
+    "firebase_url": "https://reading-list-a8c19.firebaseio.com",
+    "project_id": "reading-list-a8c19",
+    "storage_bucket": "reading-list-a8c19.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:644147083751:android:33d046d67423f73d71e542",
+        "mobilesdk_app_id": "1:775317686157:android:2c94b18e1cff4e5c301fc4",
         "android_client_info": {
           "package_name": "com.lambdaschool.readinglist"
         }
       },
       "oauth_client": [
         {
-          "client_id": "644147083751-gcrldo05r7m0t759mddp5orja428fhee.apps.googleusercontent.com",
+          "client_id": "775317686157-6hf5cijr2a9cl112hv0ail7678p4qefh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lambdaschool.readinglist",
+            "certificate_hash": "5fce86eee1f5f226b157f23c873a16a2c4eeb649"
+          }
+        },
+        {
+          "client_id": "775317686157-ulbg7vvnbasslda18s2aj7vtrjjtes1p.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDcRCGJdm7wNhtuZ_qGfDUmJBadbgwm84s"
+          "current_key": "AIzaSyD2U2_bfMT3z_uD9o4MEaNioTwQDa-MCPo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "644147083751-gcrldo05r7m0t759mddp5orja428fhee.apps.googleusercontent.com",
+              "client_id": "775317686157-ulbg7vvnbasslda18s2aj7vtrjjtes1p.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

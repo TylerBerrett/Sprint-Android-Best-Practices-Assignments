@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.analytics.FirebaseAnalytics
 import kotlinx.android.synthetic.main.activity_edit_book.*
 
 class EditBookActivity : AppCompatActivity() {
@@ -14,6 +15,9 @@ class EditBookActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_book)
+
+        FirebaseAnalytics.getInstance(this).setCurrentScreen(this, "EditBookActivity", "What does this do?")
+
 
         context = this
     }
@@ -46,6 +50,13 @@ class EditBookActivity : AppCompatActivity() {
         val hasBeenRead = read_switch.isChecked
         val book = Book(id!!, bookName, bookReason, hasBeenRead)
         val bookCsv = book.toCsvString()
+
+        val bundle = Bundle()
+        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, bookName)
+        bundle.putString(FirebaseAnalytics.Param.ITEM_LIST, bookReason)
+        bundle.putBoolean(FirebaseAnalytics.Param.ITEM_VARIANT, hasBeenRead)
+        FirebaseAnalytics.getInstance(this).logEvent("book_added", bundle)
+
         val intent = Intent()
         intent.putExtra(Constants.EDIT_BOOK_TAG, bookCsv)
         setResult(RESULT_OK, intent)
