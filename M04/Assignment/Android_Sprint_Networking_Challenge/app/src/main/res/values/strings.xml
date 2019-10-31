@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PokemonSprint</string>
+    <string name="add_to_list">add to list</string>
+    <string name="remove_from_list">remove from list</string>
+</resources>

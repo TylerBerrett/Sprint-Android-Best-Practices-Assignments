@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "383385505348",
+    "firebase_url": "https://crashme-7208d.firebaseio.com",
+    "project_id": "crashme-7208d",
+    "storage_bucket": "crashme-7208d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:383385505348:android:4f7a6b46b43a54586ab611",
+        "android_client_info": {
+          "package_name": "com.tylerb.crashme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "383385505348-ndeaphte6rq367qlm9hb9sd4pdgfc57r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tylerb.crashme",
+            "certificate_hash": "5fce86eee1f5f226b157f23c873a16a2c4eeb649"
+          }
+        },
+        {
+          "client_id": "383385505348-2um0uua3c2dgfdnjsoueuebad3vk7kij.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeJZ9A_xoVboQfkcTeVcXLN8G1ukbyAWs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "383385505348-2um0uua3c2dgfdnjsoueuebad3vk7kij.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
