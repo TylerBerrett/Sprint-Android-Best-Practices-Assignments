@@ -6,13 +6,19 @@ import android.os.Bundle
 import android.widget.SearchView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.tylerb.pokemonsearch.di.App
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
 import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity(), Callback<Pokemon> {
+
+    @Inject
+    lateinit var pokemonDagger: PokemonGetApi
+
     companion object{
         var PokemonNameNumber = ""
         val POKEMON_INTENT_KEY = "treecko"
@@ -54,6 +60,9 @@ class MainActivity : AppCompatActivity(), Callback<Pokemon> {
     val callback: Callback<Pokemon> = this
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        (application as App).appComponent.inject(this)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -66,7 +75,11 @@ class MainActivity : AppCompatActivity(), Callback<Pokemon> {
         search_bar.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(p0: String?): Boolean {
                 PokemonNameNumber = search_bar.query.toString()
-                PokemonObject.getPokemon().enqueue(callback)
+
+
+                pokemonDagger.getPokemonByNameOrID("12").enqueue(this@MainActivity)
+
+                //PokemonObject.getPokemon().enqueue(callback)
                 return true
             }
 

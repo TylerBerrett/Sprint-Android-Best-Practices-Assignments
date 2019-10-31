@@ -20,8 +20,6 @@ object PokemonObject {
             .build()
     }
 
-
-    fun getPokemon(): Call<Pokemon>{
-        return retrofitInstance().create(PokemonGetApi::class.java).getPokemonByNameOrID(MainActivity.PokemonNameNumber)
-    }
+    @Provides
+    fun getPokemon(retrofitInstance: Retrofit) = retrofitInstance.create(PokemonGetApi::class.java)
 }
